@@ -13,7 +13,7 @@ import java.util.Random;
 public class RobotColorChooser {
 	public static void main(String[] args) {
 		Robot rob=new Robot();
-		for(int i=1; i<10; i++) {
+		
 		Random ran=new Random();
 		int joe=ran.nextInt(40);
 		//1. Create a new Robot
@@ -22,11 +22,12 @@ public class RobotColorChooser {
 		//3. Ask the user what color they would like the robot to draw
 	String jerry=JOptionPane.showInputDialog(null, "what color do you want to draw with? (red or blue)");
 		//5. Use an if/else statement to set the pen color that the user requested
+	for(int i=1; i<10; i++) {
 if (jerry .equals ("red")) {
-	rob.setPenColor(100,0,0);
+	rob.setPenColor(100000,0,0);
 }
 if (jerry .equals ("blue")) {
-	rob.setPenColor(0,0,1000);
+	rob.setPenColor(0,0,100000);
 }
 if (jerry .equals ("")) {
 	rob.setPenColor(joe,joe,0);
