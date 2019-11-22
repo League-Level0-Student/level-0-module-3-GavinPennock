@@ -6,8 +6,18 @@ public class obideient_robot {
 public static void main(String[] args) {
 	Robot frank=new Robot();
 	frank.setSpeed(100);
-	String color=JOptionPane.showInputDialog(null, "pick a color! put it into red amount, green amount, and blue amount. all of them should be numbers, with comas inbetween");
+	String color=JOptionPane.showInputDialog(null, "pick a color! red green or blue");
 	String shape=JOptionPane.showInputDialog(null, "pick a shape! triangle, circle, or square!");
+	
+	if(color .equals("blue")) {
+		blue(frank);
+	}
+			if(color .equals("green")) {
+				green(frank);
+			}
+			if(color .equals("red")) {
+				red(frank);
+			}
 
 	if(shape .equals ("square")) {
 	drawSquare(frank);
@@ -20,7 +30,6 @@ if(shape .equals ("circle")) {
 	drawCircle(frank);
 }
 
-		
 	}
 static void drawSquare(Robot q) {
 	q.penDown();
@@ -44,6 +53,15 @@ static void drawCircle(Robot q) {
 	q.turn(1);
 	}
 }
+	static void green(Robot q) {
+	q.setPenColor(0, 1000000, 0);
+	}
+	static void red(Robot q) {
+		q.setPenColor(1000000, 0, 0);
+		}
+	static void blue(Robot q) {
+		q.setPenColor(0, 0, 1000000);
+		}
 }
 
 
